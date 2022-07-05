@@ -38,5 +38,3 @@ const builder = {
 builder._init();
 
 module.exports = builder;
-
-builder.prepareEnvironment();
