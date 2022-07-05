@@ -1,0 +1,10 @@
+{
+  "name": "runner",
+  "version": "0.0.0",
+  "description": "Runner for proxmark3 hardware tests",
+  "main": "src/index.js",
+  "repository": "git@github.com:proxmark3-test/runner.git",
+  "author": "nemanjan00 <nemanjan00@gmail.com>",
+  "license": "MIT",
+  "private": false
+}

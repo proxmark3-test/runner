@@ -1,0 +1,17 @@
+# Node deps
+/node_modules
+
+# Yarn
+/yarn-error.log
+
+# Dotenv
+/.env
+
+# Coverage
+/.nyc_output
+
+# vscode
+.vscode
+
+# idea
+/.idea
