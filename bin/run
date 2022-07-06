@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+const runner = require("../src");
+
+runner.prepareEnvironment().then(() => {
+	runner.run("/tmp/pm3.tar");
+}).catch(console.error);
+
+// vi: ft=javascript

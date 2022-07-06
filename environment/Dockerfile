@@ -16,6 +16,8 @@ RUN apt-get update && \
 RUN useradd -ms /bin/bash rrg
 RUN passwd -d rrg
 
+RUN echo "dialout-container:x:987:rrg" >> /etc/group
+
 USER rrg
 WORKDIR "/home/rrg"
 

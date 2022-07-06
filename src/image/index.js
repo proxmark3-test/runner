@@ -4,7 +4,7 @@ module.exports = (docker) => {
 	const image = {
 		// TODO: Label image
 		_buildImage: (name) => {
-			name = name || "proxmark3-builder";
+			name = name || "proxmark3-runner";
 
 			return new Promise((resolve, reject) => {
 				docker.buildImage({

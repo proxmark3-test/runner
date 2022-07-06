@@ -1,6 +1,7 @@
 const Docker = require("dockerode");
 
 const image = require("./image");
+const container = require("./container");
 
 const builder = {
 	_docker: undefined,
@@ -31,6 +32,14 @@ const builder = {
 
 		return builder._prepareEnvironment.reduce((prev, cur) => prev.then(() => cur(builder._docker)), Promise.resolve()).then(() => {
 			console.log("Prepared environment... Ready to accept commands...");
+		});
+	},
+
+	run: (path) => {
+		return container(builder._docker).reboot(path).then(() => {
+			return container(builder._docker).flash(path).then(() => {
+				console.log("Done...");
+			});
 		});
 	}
 };
