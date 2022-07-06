@@ -36,10 +36,8 @@ const builder = {
 	},
 
 	run: (path) => {
-		return container(builder._docker).reboot(path).then(() => {
-			return container(builder._docker).flash(path).then(() => {
-				console.log("Done...");
-			});
+		return container(builder._docker).run(path).then(() => {
+			console.log("Done...");
 		});
 	}
 };
